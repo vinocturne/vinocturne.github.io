@@ -59,8 +59,10 @@ checkName();
 
 function onClickLogin(event) {
   event.preventDefault();
-  localStorage.setItem('loginName', loginName.value);
-  checkName();
+  if (loginName.value.length !== 0) {
+    localStorage.setItem('loginName', loginName.value);
+    checkName();
+  }
 }
 
 loginButton.addEventListener('click', onClickLogin);
