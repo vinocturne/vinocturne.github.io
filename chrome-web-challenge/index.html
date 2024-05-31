@@ -31,8 +31,17 @@
         <button id="login-button" class="login-button">log in</button>
       </form>
     </div>
-    <div class="user-container">
+    <div id="user-container" class="user-container">
       <span id="user-name" class="user-name"></span>
+    </div>
+    <img class="todo-icon" id="todo-icon" src="./src/asset/image/todolist.png" />
+    <div id="todo-container" class="todo-container">
+      <img class="exit-icon" id="exit-icon" src="./src/asset/image/exit.png" />
+      <form class="todo-form">
+        <input id="todo" class="todo" type="text" placeholder="type your todo" />
+        <button id="todo-add-button" class="todo-add-button">Add</button>
+        <ul id="list-container" class="list-container"></ul>
+      </div>
     </div>
     <script src="src/js/index.js"></script>
     <script src="src/js/weather.js"></script>

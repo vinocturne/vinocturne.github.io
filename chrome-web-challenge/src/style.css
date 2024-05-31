@@ -3,6 +3,7 @@ body {
   height: 99vh;
   width: 99vw;
   font-family: 'Roboto Condensed', sans-serif;
+  overflow: hidden;
 }
 .weather-container {
   position: relative;
@@ -83,6 +84,7 @@ body {
 
 .user-container {
   position: absolute;
+  display: none;
   background-color: #5d5e59a6;
   height: 48px;
   top: 65%;
@@ -98,7 +100,122 @@ body {
   font-weight: 700;
   color: white;
 }
+.todo-icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 50px;
+  filter: invert();
+  cursor: pointer;
+}
+
+.animate-slideout {
+  animation: slideout 1s ease-out;
+}
+
+.animate-slidein {
+  animation: slidein 1s ease-out;
+}
+
+.todo-container {
+  min-height: 300px;
+  width: 300px;
+  background-color: #535450a6;
+  position: absolute;
+  top: 50%;
+  right: -50%;
+  transform: translateY(-50%);
+  border-radius: 10px;
+  border-top-left-radius: 0;
+}
+.exit-icon {
+  background-color: #535450a6;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  top: -40px;
+  position: fixed;
+  left: 0%;
+  width: 30px;
+  padding: 5px;
+}
+.todo-form {
+  width: 100%;
+  position: relative;
+  margin: 10px 15px;
+}
+.todo {
+  height: 28px;
+  width: 70%;
+  border: none;
+  border-radius: 5px;
+  top: 0;
+}
+.todo:focus {
+  outline-width: 0;
+}
+
+.todo-add-button {
+  vertical-align: top;
+  border: none;
+  height: 30px;
+  width: 50px;
+  border-radius: 5px;
+  padding: 0;
+  font-size: 14px;
+  cursor: pointer;
+}
+.todo-add-button:active {
+  background-color: gray;
+  color: white;
+}
+
+.list-container {
+  margin-top: 10px;
+  list-style-type: disc;
+}
+
+.list-container li {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.list-container li::marker {
+  color: white;
+}
+
+.list-container li span {
+  font-size: 22px;
+  color: white;
+}
+
+.list-container li button {
+  background-color: transparent;
+  border: none;
+}
 
 .hidden {
   display: none;
+}
+
+@keyframes slideout {
+  from {
+    right: 0;
+    opacity: 1;
+  }
+  to {
+    right: -20%;
+    opacity: 0;
+  }
+}
+
+@keyframes slidein {
+  from {
+    right: -20%;
+    opacity: 0;
+  }
+  to {
+    right: 0;
+    opacity: 1;
+  }
 }
