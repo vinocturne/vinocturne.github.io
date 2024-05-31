@@ -29,12 +29,35 @@ function getClock() {
 function getBackgroundImg() {
   const body = document.querySelector('body');
   body.style.backgroundImage = imageArray[Math.floor(Math.random() * imageArray.length)];
-  body.style.backgroundSize = '100%';
+  body.style.backgroundSize = 'cover';
   body.style.backgroundRepeat = 'no-repeat';
   body.style.backgroundPosition = 'center';
-  console.log(body);
 }
 
 getDate();
 setInterval(getClock, 1000);
 getBackgroundImg();
+
+const loginContainer = document.getElementById('login-container');
+const loginButton = document.getElementById('login-button');
+const loginName = document.getElementById('login-name');
+
+function checkName() {
+  const name = window.localStorage.getItem('loginName');
+  if (name == null) {
+    console.log('없음');
+  } else {
+    loginContainer.classList.add('hidden');
+    const userName = document.getElementById('user-name');
+    userName.innerText = `Welcome ${name}!`;
+  }
+}
+
+checkName();
+
+function onClickLogin(event) {
+  event.preventDefault();
+  window.localStorage.setItem('loginName', loginName.value);
+  checkName();
+}
+loginButton.addEventListener('click', onClickLogin);

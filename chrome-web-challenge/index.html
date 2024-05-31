@@ -6,12 +6,35 @@
     <title>NomadCoders Chrome Web Challenge</title>
     <link rel="stylesheet" href="src/reset.css" />
     <link rel="stylesheet" href="src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <div id="weather-container" class="weather-container">
+      <div class="info">
+        <img class="location" src="./src/asset/image/location.png" />
+        <span id="name">Now loading location info...</span>
+        <span id="temp"></span>
+      </div>
+    </div>
     <div class="clock-container">
       <h1 id="day" class="day"></h1>
       <h1 id="clock" class="clock"></h1>
     </div>
-    <script src="src/index.js"></script>
+    <div id="login-container" class="login-container">
+      <form class="login-form">
+        <input id="login-name" class="name" type="text" placeholder="type your name" />
+        <button id="login-button" class="login-button">log in</button>
+      </form>
+    </div>
+    <div class="user-container">
+      <span id="user-name" class="user-name"></span>
+    </div>
+    <script src="src/js/index.js"></script>
+    <script src="src/js/weather.js"></script>
   </body>
 </html>

@@ -1,24 +1,104 @@
 body {
   position: relative;
-  height: 100vh;
-  width: 100vw;
+  height: 99vh;
+  width: 99vw;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.weather-container {
+  position: relative;
+  margin: 10px;
+}
+.info {
+  position: absolute;
+  background-color: #faebd7a6;
+  border-radius: 10px;
+  padding: 5px 15px 10px 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+}
+.location {
+  position: relative;
+  margin-top: 10px;
+  width: 18px;
+}
+.temp {
+  width: 22px;
 }
 .clock-container {
   position: absolute;
   top: 50%;
   left: 50%;
-  translate: -50% -50%;
-  width: 600px;
-  background-color: #adadada6;
-  padding: 30px 10px 10px 30px;
+  transform: translate(-50%, -50%);
+  width: 550px;
+  background-color: #5d5e59a6;
+  padding: 20px 20px 10px 20px;
   border-radius: 20px;
 }
 .day {
   font-size: 52px;
   font-weight: 500;
+  color: white;
 }
 .clock {
   font-weight: 900;
   font-size: 150px;
   font-style: italic;
+  color: white;
+}
+.login-container {
+  position: absolute;
+  height: 48px;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+  padding: 0;
+}
+.login-form {
+  display: flex;
+  gap: 10px;
+  padding: 0;
+}
+.name {
+  border: none;
+  height: 48px;
+  width: 300px;
+  border-radius: 5px;
+  font-size: 28px;
+  text-align: center;
+  cursor: pointer;
+}
+.name:focus {
+  outline-width: 0;
+}
+.login-button {
+  vertical-align: top;
+  border: none;
+  height: 48px;
+  width: 100px;
+  border-radius: 5px;
+  padding: 0;
+  font-size: 18px;
+}
+
+.user-container {
+  position: absolute;
+  background-color: #5d5e59a6;
+  height: 48px;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -65%);
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.user-name {
+  font-size: 42px;
+  font-style: italic;
+  font-weight: 700;
+  color: white;
+}
+
+.hidden {
+  display: none;
 }
